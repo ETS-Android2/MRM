@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runStepEnforcer"
+        android:text="@string/run_step"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ECEEFA">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:text="@string/scheduling_table"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TableLayout
+                android:id="@+id/tableOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:foregroundGravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/medRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/medicine"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/timeRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/time"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/timeConsumptionRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/consumption_time"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/newTimeRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/new_time"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/skipRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/skip_pill"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/medRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/fosamax"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/timeRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/_360"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/timeConsumptionRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/newTimeRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/skipRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/no"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/medRow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/moment"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/timeRow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/_730"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/timeConsumptionRow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/newTimeRow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/skipRow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/no"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/medRow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/moment"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/timeRow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/_1140"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/timeConsumptionRow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/newTimeRow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/skipRow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cell_shape"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/no"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="select_specification"/>
+    <item type="id" name="switch_comp1"/>
+    <item type="id" name="switch_comp2"/>
+    <item type="id" name="edit_Time"/>
+    <item type="id" name="red_led_1"/>
+    <item type="id" name="red_led_2"/>
+    <item type="id" name="led_Layout"/>
+    <item type="id" name="patient_output"/>
+</resources>
