@@ -9,9 +9,9 @@ Initially, the caregiver or the patient through the mobile app downloads a drug 
 Once the medicines are added into the pill box and the pill box actual configuration is checked against the prescription via the remote control app, the patient is notified by the pill box when a medicine has to be taken. A red led, corresponding to the compartment where the medicine to be taken is located, is turned on and the compartment is unlocked. The patient/care giver has to open and then close the compartment to report to the remote control app that the medicine was effectively taken. If after T minutes (e.g., 10 minutes) from the expected time the medicine is not taken, the red led starts flashing for T minutes further, after which the pill is considered missed by the system. 
 
 The implemented enforcement scenarios are:
-MP1 - Pill missed, it is postponed if there isn't overlapping with the next pill 
-MP2 - Pill missed, it is skipped because a postponement causes overlapping with the next pill 
-LP1 - Pill taken later, skip next pill if the new consumption time causes and overlapping with the next pill
+MP1 - Pill missed, it is postponed if there isn't overlapping with the next pill  
+MP2 - Pill missed, it is skipped because a postponement causes overlapping with the next pill  
+LP1 - Pill taken later, skip next pill if the new consumption time causes and overlapping with the next pill 
 
 ### Enforcer framewrok
 The framework is available for download within the ASMETA GitHub source repository https://github.com/asmeta/asmeta/tree/master/code/experimental/asmeta.enforcer 
